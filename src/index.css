@@ -40,12 +40,12 @@ label input{
   opacity: 0;
 }
 label{
-  display: block;
+  display: inline-block;
   width: 30px;
   height: 30px;
   border: 1px solid var(--primary);
   border-radius: 50%;
-  margin: 10px auto;
+  margin: 10px 8px;
   line-height: 30px;
   color: var(--primary);
   font-weight: bold;

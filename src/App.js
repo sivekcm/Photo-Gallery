@@ -7,11 +7,15 @@ import Modal from './comps/Modal';
 function App() {
 
   const [modalImg, setModalImg] = useState(null);
+  const [selectMode,setSelectMode] = useState(false);
+  const [selectedFiles, setSelectedFiles] = useState([]);
+  const [allPictures, setAllPictures] = useState([]);
+
   return (
     <div className="App">
       <Title/>
-      <UploadForm/>
-      <ImageGrid setModalImg={setModalImg} />
+      <UploadForm allPicutures={allPictures} setSelectedFiles={setSelectedFiles} selectedFiles={selectedFiles} setSelectMode={setSelectMode} selectMode={selectMode}/>
+      <ImageGrid setAllPictures={setAllPictures} selectedFiles={selectedFiles} setSelectedFiles={setSelectedFiles} selectMode={selectMode} setModalImg={setModalImg} />
       {modalImg && <Modal modalImg={modalImg} setModalImg={setModalImg} />}
     </div>
   );
